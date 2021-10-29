@@ -20,7 +20,7 @@ for x in iprangenetwork.hosts():
     print("-" * 50)
     print("Scan para o Server: " + strtarget)
     for port in range(22,24):
-        socket.setdefaulttimeout(1)
+        socket.setdefaulttimeout(2)
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         result = s.connect_ex((strtarget,port))
         if result ==0:
